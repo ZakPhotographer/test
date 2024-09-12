@@ -42,14 +42,16 @@ def register(request):
         form = StudentAddForm(request.POST)
         if form.is_valid():
             form.save()
-            messages.success(request, f"Account created successfuly.")
+            messages.success(request, f"Account created successfully.")
+            return redirect("login")  # Redirect to login or home page
         else:
             messages.error(
-                request, f"Somthing is not correct, please fill all fields correctly."
+                request, f"Something is not correct, please fill all fields correctly."
             )
     else:
-        form = StudentAddForm(request.POST)
+        form = StudentAddForm()
     return render(request, "registration/register.html", {"form": form})
+
 
 
 @login_required

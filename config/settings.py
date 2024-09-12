@@ -26,9 +26,9 @@ SECRET_KEY = config(
 )
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = config("DEBUG", default=True, cast=bool)
+DEBUG = config("DEBUG", default=False, cast=bool)
 
-ALLOWED_HOSTS = ['quizztest.pythonanywhere.com']
+ALLOWED_HOSTS = ["127.0.0.1"]
 
 # change the default user models to our custom model
 AUTH_USER_MODEL = "accounts.User"
@@ -112,7 +112,7 @@ ASGI_APPLICATION = "config.asgi.application"
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'test2',          # Replace with your database name
+        'NAME': 'quizz',          # Replace with your database name
         'USER': 'root',                # Default MySQL user for XAMPP
         'PASSWORD': '',                # Default password is empty for XAMPP
         'HOST': 'localhost',

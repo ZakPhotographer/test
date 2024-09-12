@@ -86,7 +86,7 @@ class StaffAddForm(UserCreationForm):
             }
         ),
         label="Password",
-        required=False,
+        required=True,
     )
 
     password2 = forms.CharField(
@@ -98,7 +98,7 @@ class StaffAddForm(UserCreationForm):
             }
         ),
         label="Password Confirmation",
-        required=False,
+        required=True,
     )
 
     class Meta(UserCreationForm.Meta):
@@ -218,7 +218,7 @@ class StudentAddForm(UserCreationForm):
             }
         ),
         label="Password",
-        required=False,
+        required=True,
     )
 
     password2 = forms.CharField(
@@ -230,7 +230,7 @@ class StudentAddForm(UserCreationForm):
             }
         ),
         label="Password Confirmation",
-        required=False,
+        required=True,
     )
 
     # def validate_email(self):
@@ -451,6 +451,7 @@ class ParentAddForm(UserCreationForm):
             }
         ),
         label="Password",
+        required=True
     )
 
     password2 = forms.CharField(
