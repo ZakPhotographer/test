@@ -111,14 +111,15 @@ ASGI_APPLICATION = "config.asgi.application"
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'quizz',          # Replace with your database name
-        'USER': 'root',                # Default MySQL user for XAMPP
-        'PASSWORD': '',                # Default password is empty for XAMPP
-        'HOST': 'localhost',
-        'PORT': '3306',
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'qcmweb',
+        'USER': 'myprojectuser',
+        'PASSWORD': 'qcmweb',
+        'HOST': '206.189.25.101',
+        'PORT': '',
     }
 }
+
 
 # https://docs.djangoproject.com/en/stable/ref/settings/#std:setting-DEFAULT_AUTO_FIELD
 DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
