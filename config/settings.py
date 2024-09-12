@@ -12,8 +12,7 @@ https://docs.djangoproject.com/en/2.2/ref/settings/
 """
 
 import os
-EMAIL_HOST_USER=Zakariarahimi1998@gmail.com
-EMAIL_HOST_PASSWORD=Beeqcm@2024
+from decouple import config
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -182,15 +181,15 @@ MEDIA_ROOT = os.path.join(BASE_DIR, "media")
 # E-mail configuration
 
 EMAIL_BACKEND = config(
-EMAIL_BACKEND=django.core.mail.backends.smtp.EmailBackend
+    "EMAIL_BACKEND", default="django.core.mail.backends.smtp.EmailBackend"
 )
-EMAIL_HOST=smtp.gmail.com
-EMAIL_PORT=587
-EMAIL_USE_TLS=True
-EMAIL_FROM_ADDRESS=rochdi.karouali1234@gmail.com
-EMAIL_HOST_USER=Zakariarahimi1998@gmail.com
-EMAIL_HOST_PASSWORD=Beeqcm@2024
-
+EMAIL_HOST = config("EMAIL_HOST", default="smtp.gmail.com")
+EMAIL_PORT = config("EMAIL_PORT", default=587)
+EMAIL_USE_TLS = config("EMAIL_USE_TLS", default=True, cast=bool)
+EMAIL_HOST_USER = config("EMAIL_HOST_USER")
+EMAIL_HOST_PASSWORD = config("EMAIL_HOST_PASSWORD")
+EMAIL_FROM_ADDRESS = config("EMAIL_FROM_ADDRESS")
+EMAIL_USE_SSL = False
 
 # crispy config
 CRISPY_ALLOWED_TEMPLATE_PACKS = "bootstrap5"
