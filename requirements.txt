@@ -1,4 +1,1 @@
 -r requirements/local.txt
-# requirements.txt
-python_version == '3.x'
-
