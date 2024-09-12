@@ -6,7 +6,7 @@ argon2-cffi==21.3.0
 whitenoise==6.2.0
 redis==4.4.0
 hiredis==2.1.1
-python-decouple==[latest_version]  # Replace [latest_version] with the desired version or omit it for the latest version
+python-decouple
 
 # Django
 django==4.0.8
