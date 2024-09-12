@@ -1,1 +1,2 @@
 -r requirements/local.txt
+pip freeze > requirements.txt
