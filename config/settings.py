@@ -116,7 +116,7 @@ DATABASES = {
         'USER': 'myprojectuser',
         'PASSWORD': 'qcmweb',
         'HOST': '206.189.25.101',
-        'PORT': '',
+        'PORT': '5432',
     }
 }
 
